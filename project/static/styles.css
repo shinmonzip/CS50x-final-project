@@ -1,0 +1,249 @@
+/* Prevent horizontal overflow */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 60px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-links a,
+.header-title {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.auth-links a:hover,
+.header-title:hover {
+    text-decoration: underline;
+}
+
+/* Header title as a button */
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Change Password button style */
+.change-password-btn {
+    color: white;
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.change-password-btn:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Input field */
+.form-container input,
+.form-container select,
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container input,
+.form-container select {
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    background-color: #fff;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Task Table Styles */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.task-table th {
+    background-color: #f4f4f4;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.task-table td {
+    background-color: white;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Ensure all buttons stay on the same line in the table */
+.task-table td form {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Adjust column width for task column */
+.task-table td:first-child {
+    width: 40%;
+}
+
+/* Button width fix */
+.done-btn,
+.delete-btn,
+.edit-btn {
+    width: auto;
+}
+
+/* Button Styles */
+.done-btn,
+.delete-btn,
+.edit-btn {
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.done-btn {
+    background-color: #333;
+}
+
+.done-btn:hover {
+    background-color: #444;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.edit-btn {
+    background-color: #2ecc71;
+}
+
+.edit-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Completed Tasks Styles */
+.completed-tasks-container {
+    margin-top: 20px;
+}
+
+.completed-tasks-container h3 {
+    margin-left: 20px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* Flash Messages Styles */
+.flash-messages {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-table th,
+    .task-table td {
+        padding: 8px;
+    }
+
+    .form-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
